@@ -10,6 +10,12 @@ void greet() {
   std::cout << "by guessing the letters in the codeword." << std::endl << std::endl;
 }
 
+void getUserInput(char &letter) {
+  std::cout << std::endl;
+  std::cout << "Please enter your guess: ";
+  std::cin >> letter;
+}
+
 void end_game(const std::string &answer, const std::string &codeword) {
   if (answer.compare(codeword) == 0) {
     std::cout << "Hooray! You saved the person and earned a medal of honor!" << std::endl;
