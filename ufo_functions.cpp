@@ -1,3 +1,4 @@
+#include <cctype>
 #include <iostream>
 #include <vector>
 
@@ -14,6 +15,8 @@ void getUserInput(char &letter) {
   std::cout << std::endl;
   std::cout << "Please enter your guess: ";
   std::cin >> letter;
+
+  letter = tolower(letter);
 }
 
 void end_game(const std::string &answer, const std::string &codeword) {
@@ -22,6 +25,7 @@ void end_game(const std::string &answer, const std::string &codeword) {
   }
   else {
     std::cout << "Oh no! The UFO just flew away with another person!" << std::endl;
+    std::cout << "Codeword was \"" << codeword << "\"" << std::endl;
   }
 }
 
