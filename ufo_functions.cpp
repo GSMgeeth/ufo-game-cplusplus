@@ -9,6 +9,16 @@ void greet() {
     std::cout << "by guessing the letters in the codeword." << std::endl;
 }
 
+void end_game(const std::string &answer, const std::string &codeword) {
+    if (answer.compare(codeword) == 0)
+    {
+        std::cout << "Hooray! You saved the person and earned a medal of honor!" << std::endl;
+    }
+    else {
+        std::cout << "Oh no! The UFO just flew away with another person!" << std::endl;
+    }
+}
+
 void display_misses(const int misses) {
   if (misses == 0 || misses == 1) {
     std::cout << "                 .                            \n";
